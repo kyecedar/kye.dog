@@ -1,0 +1,408 @@
+:root {
+    --col-bumblebit-dark   : #272946;
+    --col-bumblebit-accent : #EDA031;
+    --col-bumblebit-light  : #E7FFEE;
+
+    --col-titanstone-dark  : #150413;
+    --col-titanstone-mid   : #635C6D;
+    --col-titanstone-light : #FFFFD1;
+
+    --primary   : var(--col-titanstone-mid);
+    --secondary : var(--col-titanstone-mid);
+    --mid       : var(--col-titanstone-mid);
+
+    --margins : 10px;
+    --corners : 8px;
+}
+
+:root[theme="light"] {
+    --primary   : var(--col-titanstone-light);
+    --secondary : var(--col-titanstone-dark);
+    --mid       : var(--col-titanstone-mid);
+}
+
+:root[theme="dark"] {
+    --primary   : var(--col-titanstone-dark);
+    --secondary : var(--col-titanstone-light);
+    --mid       : var(--col-titanstone-mid);
+}
+
+:root[held] {
+    cursor : grabbing;
+
+    /* https://stackoverflow.com/a/10810170 */
+    -webkit-user-select : none;  
+    -moz-user-select    : none;    
+    -ms-user-select     : none;      
+    user-select         : none;
+}
+
+html, body {
+    display : relative;
+
+    overflow-x : hidden;
+
+    width      : 100vw;
+    min-width  : 170px;
+    min-height : 100vh;
+
+    color      : var(--secondary);
+    background : var(--primary);
+
+    transition-property : background color;
+    transition-duration : 0.25s;
+
+    font-family : GeistMono;
+    font-size   : 16px;
+}
+
+.container {
+    display : flex;
+    justify-content : center;
+
+    width      : 100vw;
+    min-width  : 170px;
+    min-height : 100vh;
+}
+
+a {
+    color : var(--secondary);
+}
+
+.icon, img {
+    /* https://stackoverflow.com/a/14068216 */
+    image-rendering        : optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering        : -moz-crisp-edges;          /* Firefox                        */
+    image-rendering        : -o-crisp-edges;            /* Opera                          */
+    image-rendering        : -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering        : pixelated;                 /* Universal support since 2021   */
+    image-rendering        : optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode : nearest-neighbor;          /* IE8+                           */
+}
+
+.icon {
+    --icon        : url();
+    --icon-size   : 100%;
+    --icon-repeat : no-repeat;
+    --width       : 10px;
+    --height      : 10px;
+    --position    : 0px 0px;
+
+    -webkit-mask-image     : var(--icon);
+    mask-image             : var(--icon);
+    -webkit-mask-size      : var(--icon-size);
+    mask-size              : var(--icon-size);
+    -webkit-mask-repeat    : var(--icon-repeat);
+    mask-repeat            : var(--icon-repeat);
+    -webkite-mask-position : var(--position);
+    mask-position          : var(--position);
+
+    user-drag: none;
+    -webkit-user-drag: none;
+    
+    width  : var(--width);
+    height : var(--height);
+    
+    background-color : currentColor;
+}
+
+.animsprite {
+    --spritesheet : url();
+    --frame  : 1; /* current frame */
+    --width  : 10px;
+    --height : 10px;
+
+    position : relative;
+    overflow : hidden;
+
+    --icon      : var(--spritesheet);
+    --icon-size : auto 100%;
+    --position  : calc(var(--width) * (var(--frame) - 1) * -1) 0px;
+
+    background-color : currentColor;
+}
+
+.content {
+    position       : relative;
+    display        : flex;
+    flex-direction : column;
+    gap            : var(--margins);
+
+    width      : calc(100vw - (var(--margins) * 2));
+    min-width  : 150px;
+    max-width  : 650px;
+    min-height : calc(100vh - (var(--margins) * 2));
+    
+    padding : var(--margins);
+}
+
+.opener {
+    position : relative;
+    display  : flex;
+    flex-direction : row;
+    gap            : var(--margins);
+
+    height : 150px;
+}
+
+.flex-row {
+    display : flex;
+    flex-direction : row;
+    gap            : var(--margins);
+    flex-grow : 1;
+}
+
+article.idcard {
+    position : relative;
+
+    min-width : 300px;
+    height    : 100%;
+
+    padding : var(--margins);
+
+    box-sizing : border-box;
+    border : 2px solid var(--mid);
+
+    border-radius : var(--corners);
+}
+
+article.idcard h1 {
+    font-size : 24px;
+    font-weight : 900;
+}
+
+article.idcard h2 {
+    color : var(--mid);
+}
+
+article.idcard .buddy {
+    position : absolute;
+
+    right  : var(--margins);
+    bottom : var(--margins);
+
+    --image : url(/assets/images/cat.png);
+    --image-scale : 3;
+
+    width  : calc(16px * var(--image-scale));
+    height : calc(11px * var(--image-scale));
+    -webkit-mask-size : 100%;
+    mask-size         : 100%;
+
+    -webkit-mask-image : var(--image);
+    mask-image         : var(--image);
+    background         : var(--mid);
+}
+
+article.datapoints {
+    display        : flex;
+    flex-direction : column;
+    flex-grow      : 1;
+    height         : 100%;
+}
+
+article.datapoints .timezone {
+    display    : flex;
+    position   : relative;
+    box-sizing : border-box;
+    text-wrap  : nowrap;
+    
+    align-items     : center;
+    justify-content : center;
+
+    width      : 100%;
+    min-height : 30px;
+
+    border : 1px solid var(--mid);
+    border-radius : 0px 0px var(--corners) var(--corners);
+    color  : var(--mid);
+
+    font-size : 9px;
+}
+
+article.datapoints .timezone .separator {
+    width : 1px;
+    background : var(--mid);
+    height : 80%;
+}
+
+article.datapoints .timezone .who,
+article.datapoints .timezone .time {
+    color : var(--secondary);
+    font-size : 12px;
+}
+
+article.datapoints .timezone .yourtime,
+article.datapoints .timezone .mytime {
+    display   : flex;
+    width : 50%;
+
+    align-items     : center;
+    justify-content : center;
+}
+
+
+article.datapoints .fastlinks {
+    display : flex;
+    flex-grow : 1;
+    align-items: center;
+
+    width : 100%;
+    font-size : 12px;
+
+    color : var(--mid);
+}
+
+article.datapoints .fastlinks {
+    text-align  : justify;
+    line-height : 14px;
+}
+
+article.datapoints .event {
+    display    : flex;
+    width      : 100%;
+    height     : 30px;
+    box-sizing : border-box;
+    border : 1px solid var(--mid);
+    border-bottom : none;
+    border-radius : var(--corners) var(--corners) 0px 0px;
+}
+
+article.projects {
+    width  : 100%;
+    height : 300px;
+}
+
+article.lightswitch {
+    position : relative;
+    display  : flex;
+    
+    flex-direction : column;
+    gap : var(--margins);
+
+    width  : calc(var(--margins) * 3);
+    height : 100%;
+}
+
+article.lightswitch .indicator {
+    color : var(--mid);
+
+    --spritesheet : url(/assets/images/lightdark.png);
+    --width  : 30px;
+    --height : 30px;
+
+    animation-duration : 0.5s;
+    animation-direction : normal;
+    animation-iteration-count : 1;
+}
+
+article.lightswitch .indicator[theme="light"] {
+    --frame : 1;
+    animation-name : dark-to-light;
+}
+
+article.lightswitch .indicator[theme="dark"] {
+    --frame : 10;
+    animation-name : light-to-dark;
+}
+
+@keyframes light-to-dark {
+    0%  { --frame : 1; }
+    10% { --frame : 2; }
+    20% { --frame : 3; }
+    30% { --frame : 4; }
+    40% { --frame : 5; }
+    50% { --frame : 6; }
+    60% { --frame : 7; }
+    70% { --frame : 8; }
+    80% { --frame : 9; }
+    90% { --frame : 10; }
+}
+
+@keyframes dark-to-light {
+    0%  { --frame : 10; }
+    10% { --frame : 9; }
+    20% { --frame : 8; }
+    30% { --frame : 7; }
+    40% { --frame : 6; }
+    50% { --frame : 5; }
+    60% { --frame : 4; }
+    70% { --frame : 3; }
+    80% { --frame : 2; }
+    90% { --frame : 1; }
+}
+
+#pullchain {
+    position : relative;
+    width : 100%;
+    height : 110px;
+}
+
+#pullchain .pullchainimage {
+    --width  : 100%;
+    --height : calc(100% + var(--margins));
+
+    cursor : grab;
+
+    color : var(--mid);
+
+    --pullchain-y : calc(-1 * var(--margins));
+
+    --icon     : url(/assets/images/pullchain.png);
+    --position : 0px var(--pullchain-y);
+
+    animation-duration : 0.4s;
+    animation-direction : normal;
+    animation-iteration-count : 1;
+}
+
+#pullchain .pullchainimage[held] {
+    cursor : grabbing;
+    --pullchain-y : 0px;
+}
+
+/* there's two of these so it's easier to restart the animation. */
+@keyframes pullchain-recoil-1 {
+    0% { --pullchain-y : calc(var(--margins) * -0.5); }
+    50% { --pullchain-y : calc(var(--margins) * -1.75); }
+    75% { --pullchain-y : calc(var(--margins) * -0.9); }
+    100% { --pullchain-y : calc(var(--margins) * -1); }
+}
+
+@keyframes pullchain-recoil-2 {
+    0% { --pullchain-y : calc(var(--margins) * -0.5); }
+    50% { --pullchain-y : calc(var(--margins) * -1.75); }
+    75% { --pullchain-y : calc(var(--margins) * -0.9); }
+    100% { --pullchain-y : calc(var(--margins) * -1); }
+}
+
+
+
+@media screen and (max-width: 680px) {
+    .opener {
+        flex-wrap : wrap;
+    }
+
+    article.idcard {
+        min-width : 150px;
+        flex-basis : 100vw;
+        flex-grow  : 1;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    article.datapoints .timezone {
+        flex-direction : column;
+    }
+
+    article.datapoints .timezone .separator {
+        width : 80%;
+        height : 1px;
+    }
+
+    article.datapoints .yourtime,
+    article.datapoints .mytime {
+        width : 100%;
+        height : 30px;
+    }
+}
