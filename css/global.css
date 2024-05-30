@@ -97,8 +97,8 @@ a {
     -webkite-mask-position : var(--position);
     mask-position          : var(--position);
 
-    user-drag: none;
-    -webkit-user-drag: none;
+    user-drag         : none;
+    -webkit-user-drag : none;
     
     width  : var(--width);
     height : var(--height);
@@ -142,7 +142,7 @@ a {
     flex-direction : row;
     gap            : var(--margins);
 
-    height : 150px;
+    min-height : 150px;
 }
 
 .flex-row {
@@ -156,7 +156,7 @@ article.idcard {
     position : relative;
 
     min-width : 300px;
-    height    : 100%;
+    height    : 150px;
 
     padding : var(--margins);
 
@@ -194,46 +194,52 @@ article.idcard .buddy {
     background         : var(--mid);
 }
 
-article.datapoints {
-    display        : flex;
-    flex-direction : column;
-    flex-grow      : 1;
-    height         : 100%;
+article.fastlinks {
+    display         : flex;
+    flex-grow       : 1;
+
+    align-items     : center;
+    justify-content : center;
+
+    text-align  : justify;
+
+    height          : 100%;
+    color : var(--mid);
+    line-height : 14px;
+    font-size   : 12px;
 }
 
-article.datapoints .timezone {
+.datapoints .timezone {
     display    : flex;
     position   : relative;
     box-sizing : border-box;
     text-wrap  : nowrap;
     
-    align-items     : center;
+    align-items     : flex-start;
     justify-content : center;
 
     width      : 100%;
-    min-height : 30px;
+    min-height : 22px;
 
-    border : 1px solid var(--mid);
-    border-radius : 0px 0px var(--corners) var(--corners);
     color  : var(--mid);
 
     font-size : 9px;
 }
 
-article.datapoints .timezone .separator {
+.datapoints .timezone .separator {
     width : 1px;
     background : var(--mid);
     height : 80%;
 }
 
-article.datapoints .timezone .who,
-article.datapoints .timezone .time {
+.datapoints .timezone .who,
+.datapoints .timezone .time {
     color : var(--secondary);
     font-size : 12px;
 }
 
-article.datapoints .timezone .yourtime,
-article.datapoints .timezone .mytime {
+.datapoints .timezone .yourtime,
+.datapoints .timezone .mytime {
     display   : flex;
     width : 50%;
 
@@ -242,23 +248,9 @@ article.datapoints .timezone .mytime {
 }
 
 
-article.datapoints .fastlinks {
-    display : flex;
-    flex-grow : 1;
-    align-items: center;
 
-    width : 100%;
-    font-size : 12px;
 
-    color : var(--mid);
-}
-
-article.datapoints .fastlinks {
-    text-align  : justify;
-    line-height : 14px;
-}
-
-article.datapoints .event {
+.datapoints .event {
     display    : flex;
     width      : 100%;
     height     : 30px;
