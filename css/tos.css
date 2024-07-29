@@ -1,0 +1,95 @@
+:root {
+	--margins : 30px;
+}
+
+.lightswitch {
+	--margins : 10px;
+}
+
+.tos {
+	display : flex;
+	flex-direction: column;
+	gap : var(--margins);
+}
+
+.content > .separator,
+.tos > .separator {
+    width : 100%;
+	background: none;
+	height: 0;
+	border-bottom: 1px dashed var(--mid);
+}
+
+.headheader h2 {
+	font-weight : 900;
+	font-size : 24px;
+}
+
+.headheader .sub {
+	font-size : 12px;
+	color : var(--mid);
+}
+
+.tableofcontents ol {
+	list-style : upper-roman;
+	color : var(--mid);
+	transition-property: padding-left;
+	padding-left: 0;
+	transition-duration: 0.15s;
+}
+
+.tos strong {
+	font-weight : 900;
+}
+
+.tos .faded {
+	color : var(--mid);
+}
+
+.tos .section {
+	display : flex;
+	flex-direction: column;
+	gap : var(--margins);
+}
+
+.tos h2 {
+	font-weight : 800;
+	font-size : 18px;
+}
+
+.tos h3 {
+	font-weight : 700;
+}
+
+.tos .section ul {
+	list-style : outside;
+	font-size : 14px;
+	line-height: 18px;
+}
+
+.tos li::marker {
+	color : var(--mid);
+}
+
+.to-kofi {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	gap : var(--margins);
+}
+
+.to-kofi a {
+	background : var(--secondary);
+	color : var(--primary);
+	border-radius : 10px;
+	width: 150px;
+	padding : 15px;
+	margin-left : auto;
+	text-align: center;
+}
+
+@media screen and (max-width: 784px) {
+	.tableofcontents ol {
+		padding-left : 45px;
+	}
+}

@@ -1,6 +1,8 @@
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/100.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/100.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/100.woff') format('woff');
     font-weight  : 100;
     font-style   : normal;
     font-display : swap;
@@ -8,7 +10,9 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/200.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/200.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/200.woff') format('woff');
     font-weight  : 200;
     font-style   : normal;
     font-display : swap;
@@ -16,7 +20,9 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/300.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/300.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/300.woff') format('woff');
     font-weight  : 300;
     font-style   : normal;
     font-display : swap;
@@ -24,7 +30,9 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/400.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/400.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/400.woff') format('woff');
     font-weight  : 400;
     font-style   : normal;
     font-display : swap;
@@ -32,7 +40,9 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/500.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/500.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/500.woff') format('woff');
     font-weight  : 500;
     font-style   : normal;
     font-display : swap;
@@ -40,7 +50,9 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/600.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/600.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/600.woff') format('woff');
     font-weight  : 600;
     font-style   : normal;
     font-display : swap;
@@ -48,7 +60,9 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/700.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/700.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/700.woff') format('woff');
     font-weight  : 700;
     font-style   : normal;
     font-display : swap;
@@ -56,7 +70,9 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/800.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/800.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/800.woff') format('woff');
     font-weight  : 800;
     font-style   : normal;
     font-display : swap;
@@ -64,7 +80,84 @@
 
 @font-face {
     font-family : GeistMono;
-    src : url('/assets/fonts/GeistMono/900.otf') format('opentype');
+    src :
+        url('/assets/fonts/GeistMono/900.woff2') format('woff2'),
+        url('/assets/fonts/GeistMono/900.woff') format('woff');
+    font-weight  : 900;
+    font-style   : normal;
+    font-display : swap;
+}
+
+
+
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/100NF.otf') format('opentype');
+    font-weight  : 100;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/200NF.otf') format('opentype');
+    font-weight  : 200;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/300NF.otf') format('opentype');
+    font-weight  : 300;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/400NF.otf') format('opentype');
+    font-weight  : 400;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/500NF.otf') format('opentype');
+    font-weight  : 500;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/600NF.otf') format('opentype');
+    font-weight  : 600;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/700NF.otf') format('opentype');
+    font-weight  : 700;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/800NF.otf') format('opentype');
+    font-weight  : 800;
+    font-style   : normal;
+    font-display : swap;
+}
+
+@font-face {
+    font-family : GeistMonoNerdFont;
+    src : url('/assets/fonts/GeistMono/900NF.otf') format('opentype');
     font-weight  : 900;
     font-style   : normal;
     font-display : swap;

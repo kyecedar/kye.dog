@@ -1,0 +1,1 @@
+neocities push -e ".git" -e ".attrib_store" -e "push.bat" --no-gitignore --prune .
