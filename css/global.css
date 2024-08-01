@@ -162,7 +162,7 @@ a {
     flex-grow : 1;
 }
 
-article.lightswitch {
+.lightswitch {
     position : relative;
     display  : flex;
     
@@ -173,7 +173,7 @@ article.lightswitch {
     height : 100%;
 }
 
-article.lightswitch .indicator {
+.lightswitch .indicator {
     color : var(--mid);
 
     --spritesheet : url(/assets/images/lightdark.png);
@@ -185,12 +185,12 @@ article.lightswitch .indicator {
     animation-iteration-count : 1;
 }
 
-article.lightswitch .indicator[theme="light"] {
+.lightswitch .indicator[theme="light"] {
     --frame : 1;
     animation-name : dark-to-light;
 }
 
-article.lightswitch .indicator[theme="dark"] {
+.lightswitch .indicator[theme="dark"] {
     --frame : 10;
     animation-name : light-to-dark;
 }
@@ -263,35 +263,4 @@ article.lightswitch .indicator[theme="dark"] {
     50% { --pullchain-y : calc(var(--margins) * -1.75); }
     75% { --pullchain-y : calc(var(--margins) * -0.9); }
     100% { --pullchain-y : calc(var(--margins) * -1); }
-}
-
-
-
-@media screen and (max-width: 680px) {
-    .opener {
-        flex-wrap : wrap;
-    }
-
-    article.idcard {
-        min-width : 150px;
-        flex-basis : 100vw;
-        flex-grow  : 1;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    article.datapoints .timezone {
-        flex-direction : column;
-    }
-
-    article.datapoints .timezone .separator {
-        width : 80%;
-        height : 1px;
-    }
-
-    article.datapoints .yourtime,
-    article.datapoints .mytime {
-        width : 100%;
-        height : 30px;
-    }
 }
