@@ -79,6 +79,7 @@
 }
 
 .to-kofi a {
+	white-space: nowrap;
 	background : var(--secondary);
 	color : var(--primary);
 	border-radius : 10px;

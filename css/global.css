@@ -13,8 +13,6 @@
 
     --margins : 10px;
     --corners : 8px;
-
-    font-family : GeistMono;
 }
 
 :root[theme="light"] {
@@ -54,8 +52,12 @@ html, body {
     transition-property : background color;
     transition-duration : 0.25s;
 
-    font-family : GeistMonoNerdFont;
+    font-family : GeistMono;
     font-size   : 16px;
+}
+
+.nerd {
+    font-family: NerdFontsSymbolsMono;
 }
 
 .container {
