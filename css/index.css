@@ -84,8 +84,8 @@
     font-size : 12px;
 }
 
-.datapoints .timezone .yourtime,
-.datapoints .timezone .mytime {
+.datapoints .yourtime,
+.datapoints .mytime {
     display   : flex;
     width : 50%;
 
@@ -131,6 +131,7 @@
     .datapoints .timezone .separator {
         width : 80%;
         height : 1px;
+        margin : 0 auto;
     }
 
     .datapoints .yourtime,

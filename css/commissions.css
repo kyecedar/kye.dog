@@ -1,0 +1,51 @@
+.header {
+	flex-grow : 1;
+	display : flex;
+	flex-direction : column;
+}
+
+h1 {
+	flex-grow : 1;
+	font-weight : 900;
+	font-size : 24px;
+}
+
+h2 {
+	font-weight : 800;
+	font-size : 18px;
+}
+
+.header .sub {
+	font-size : 12px;
+	color : var(--mid);
+}
+
+.headercontent {
+    display : flex;
+    flex-direction : row;
+    gap : 10px;
+}
+
+.headercontent .commissionmebutton {
+	background : var(--secondary);
+	color : var(--primary);
+	padding : 15px;
+	border-radius : var(--corners);
+	white-space : nowrap;
+}
+
+.queue {
+	display : flex;
+	flex-direction : column;
+	gap : var(--margins);
+	min-height : 50vh;
+}
+
+.queue article {
+	display : flex;
+	flex-direction : column;
+	gap : 10px;
+}
+
+@media screen and (max-width : 480px) {
+}

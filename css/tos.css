@@ -20,12 +20,12 @@
 	border-bottom: 1px dashed var(--mid);
 }
 
-.headheader h2 {
+.header h1 {
 	font-weight : 900;
 	font-size : 24px;
 }
 
-.headheader .sub {
+.header .sub {
 	font-size : 12px;
 	color : var(--mid);
 }
